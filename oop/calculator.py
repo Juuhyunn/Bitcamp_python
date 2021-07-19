@@ -3,16 +3,22 @@ class Calculator(object):
         self.num1 = num1
         self.num2 = num2
         self.opcode = opcode
+
     def add(self):
         return self.num1 + self.num2
+
     def subtract(self):
         return self.num1 - self.num2
+
     def multiple(self):
         return self.num1 * self.num2
+
     def divide(self):
         return self.num1 / self.num2
+
     def remind(self):
         return self.num1 % self.num2
+
     @staticmethod
     def main():
         while 1:
@@ -24,7 +30,7 @@ class Calculator(object):
                 opcode = input('Opcode :')
                 num2 = int(input('Second number : '))
                 result = 0
-                calc = Calculator(num1, num2,opcode)
+                calc = Calculator(num1, num2, opcode)
                 print('*' * 100)
                 if opcode == '+':
                     result = calc.add()
