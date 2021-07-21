@@ -18,7 +18,7 @@ class Music(object):
 
     def set_html(self):
         self.html = requests.get(f'{self.domain}{self.query_string}', headers=self.headers).text
-        #print(f'Crawling HTML : {self.html}')
+        print(f'Crawling HTML : {self.html}')
 
     def get_ranking(self):
         _ = 0
