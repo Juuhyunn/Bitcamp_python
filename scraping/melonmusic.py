@@ -14,13 +14,12 @@ class MelonMusic(object):
         ls_title = soup.find_all(name='div', attrs={'class': 'ellipsis rank01'})
         for i, j in enumerate(ls_artist):
             n_artist += 1
-            print(f'{n_artist} Rank')
-            print(f'artist : {j.find("a").text}\t\ttitle : {ls_title[i].find("a").text}')
+            print(f'[ {n_artist} Rank ]  artist : {j.find("a").text}\t\ttitle : {ls_title[i].find("a").text}')
             print('*'*100)
 
 
 def main():
-    MelonMusic('https://www.melon.com/chart/index.htm?dayTime=2021072016').scrap()
+    MelonMusic('https://www.melon.com/chart/index.htm?dayTime=2021072109').scrap()
 
 
 if __name__ == '__main__':
