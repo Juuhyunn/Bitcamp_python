@@ -55,7 +55,7 @@ class Music(object):
 
 
     def df_to_csv(self):
-        path = f'./data/{self.fname}_chart.csv'
+        path = f'./data/{self.fname}.csv'
         self.df.to_csv(path, sep=',', na_rep='NaN', encoding="utf-8-sig")
 
 
@@ -77,11 +77,11 @@ def main():
         elif menu == 1:
             m1 = print_menu(['melon', 'bugs'])
             if m1 == 0:
-                mr.fname = 'Melon'
+                mr.fname = 'melon'
                 mr.domain = 'https://www.melon.com/chart/index.htm?dayTime='
                 mr.query_string = '2021072015'
             else:
-                mr.fname = 'Bugs'
+                mr.fname = 'bugs'
                 mr.domain = 'https://music.bugs.co.kr/chart/track/realtime/total?'
                 mr.query_string = 'chartdate=20210721&charthour=10'
             mr.set_html()
