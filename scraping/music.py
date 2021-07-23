@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
+from common.menu import print_menu
+
 
 class Music(object):
     domain = ''
@@ -57,15 +59,6 @@ class Music(object):
     def df_to_csv(self):
         path = f'./data/{self.fname}.csv'
         self.df.to_csv(path, sep=',', na_rep='NaN', encoding="utf-8-sig")
-
-
-def print_menu(ls):
-    t = ''
-    for i, j in enumerate(ls):
-        t += str(i) + '. ' + j + '\t'
-    return int(input(t))
-
-
 
 
 def main():
