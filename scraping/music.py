@@ -29,7 +29,7 @@ class Music(object):
         all2 = soup.find_all(name=self.tag_name, attrs={'class': self.class_name[1]})
 
         for i, j in zip(all1, all2):
-            _+=1
+            _ += 1
             print(f'{self.fname} : {_}위. {i.find("a").text}  - {j.find("a").text}')
             self.artists.append(i.find("a").text)
             self.titles.append(j.find("a").text)
