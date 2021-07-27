@@ -7,7 +7,7 @@ class TemperaturesOnMyBirthdayTest(object):
     ls: [] = list()
 
     def read_data(self):
-        data = csv.reader(open('./data/unit05_seoul.csv', encoding='utf-8'))
+        data = csv.reader(open('./data/seoul.csv', encoding='utf-8'))
         next(data)
         self.data = data
 

@@ -33,7 +33,7 @@ class ChangedTemperaturesOnMyBirthday(object):
         self.extract_date_data()
 
     def read_data(self) -> object:
-        data = csv.reader(open('./data/unit05_seoul.csv', encoding='utf-8'))
+        data = csv.reader(open('data/seoul.csv', encoding='utf-8'))
         next(data)
         self.data = data
         return data
@@ -81,8 +81,7 @@ if __name__ == '__main__':
     this = ChangedTemperaturesOnMyBirthday()
     this.read_data()
     this.save_highest_temperature()
-    this.visualize_data()
-    # print(this.find_month_using_split())
+    # this.visualize_data()
+    # # print(this.find_month_using_split())
     this.read_data()
     this.highest_temperatures_my_birthday()
-
